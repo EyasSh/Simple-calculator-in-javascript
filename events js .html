@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>events</title>
+        <style>
+            input
+            {
+                background-color: rgb(255, 126, 5);
+                width: 420px;
+                height: 30px;
+                border:none;
+                padding: none;
+                
+                
+                
+            }
+            input:hover
+            {
+              background-color: rgb(236, 139, 11);
+              border: none;
+              padding: none;
+              color: rgb(0, 0, 0);
+            }
+            input:focus{
+                background-color: rgb(241, 155, 25);
+              border: none;
+              padding: none;
+              outline: none;
+              color: rgb(0, 0, 0);
+            }
+            
+            body  {
+                overflow: hidden;
+                background-color: rgb(6, 230, 238);
+            }
+            
+            button 	{
+                background-color: rgb(124, 255, 200);
+              border: none;
+              color: rgb(0, 0, 0);
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              font-size: 26px;
+              margin: 4px 2px;
+              cursor: pointer;
+              
+            }
+            button:focus
+            {
+                outline: none;
+            }
+            form
+            {
+              transform: translate(32%,10%);
+            }
+            header
+            {
+              color: rgb(20, 4, 255);
+              
+              font-size: 48px;
+              text-align: center;
+              font-family: Georgia, 'Times New Roman', Times, serif;
+              
+            }
+            
+                </style>
+    </head>
+    <body>
+        <header><b>Calculator By eyas</b></header>
+        
+        <form onsubmit="return false">
+        <input type="text" id="in"></input>
+            <p></p>
+            <button id="0"   onclick="eyas('*') ">*</button>
+            <button id="1"    onclick= "eyas('1')"  > 1 </button>
+            <button id="2"   onclick="eyas('2')"  > 2 </button>
+            <button id="3"   onclick="eyas('3')"  > 3 </button>
+        
+            <button id="4"   onclick="eyas('+')" > + </button>
+        
+            <br>
+            <button id="5" onclick="eyas('/')">/</button> 
+            <button id="6"   onclick="eyas('4')"> 4 </button>
+            <button id="7"   onclick="eyas('5')"> 5 </button>
+            <button id="8"  onclick="eyas('6')"> 6 </button>
+        
+            <button id="9"  onclick="eyas('-')"> - </button>
+        
+            <br>
+        
+             <button id="C" onclick="Clear()">C</button>
+            <button id="10"   onclick="eyas('7')"> 7 </button>
+            <button id="11"   onclick="eyas('8')"> 8 </button>
+            <button id="12"   onclick="eyas('9')"> 9 </button>
+             
+            <button id="13"   onclick="eyas('0')">0</button>
+            <p></p>
+            <button id="=" onclick="equal(globe)"> = </button>
+        </form>
+    
+        <script>
+        
+            var globe = '';
+            
+
+          function eyas(output)
+          {
+           
+            document.getElementById("in").value += output;
+ 
+             
+             
+          }
+          function Clear()
+          {
+           
+             document.getElementById("in").value = '';
+ 
+          }
+          function equal(x)
+          { 
+                     globe = document.getElementById("in").value;
+                     document.getElementById("in").value = eval(globe);
+ 
+          }
+ 
+ 
+         
+        
+         </script>
+       
+           
+           
+            
+            
+
+       
+    </body>
+</html>
